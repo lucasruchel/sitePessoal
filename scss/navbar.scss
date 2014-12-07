@@ -49,12 +49,12 @@
 }
 
 /*Hide checkbox*/
-input[type=checkbox]{
+input#show-menu[type=checkbox]{
     display: none;
 }
 
 /*Show menu when invisible checkbox is checked*/
-input[type=checkbox]:checked ~ .nav{
+input#show-menu[type=checkbox]:checked ~ .nav{
     display: block;
 }
 

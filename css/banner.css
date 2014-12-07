@@ -31,13 +31,23 @@
   }
 
   /* line 39, ../scss/banner.scss */
+  .repolist ul li, li a {
+    display: inline-block;
+  }
+
+  /* line 42, ../scss/banner.scss */
   .presentation {
     min-width: 1000px;
     width: 100%;
   }
 }
 @media screen and (max-width: 999px) {
-  /* line 48, ../scss/banner.scss */
+  /* line 51, ../scss/banner.scss */
+  .repolist ul li, li a {
+    display: block;
+  }
+
+  /* line 54, ../scss/banner.scss */
   .presentation {
     display: inline-block;
     max-width: 999px;
@@ -48,13 +58,98 @@
     min-height: 300px;
     vertical-align: middle;
   }
-  /* line 58, ../scss/banner.scss */
+  /* line 64, ../scss/banner.scss */
   .presentation .logo {
     z-index: 5;
     padding-top: 50px;
   }
-  /* line 64, ../scss/banner.scss */
+  /* line 70, ../scss/banner.scss */
   .presentation img {
     border-radius: 50%;
   }
+}
+/* line 76, ../scss/banner.scss */
+input#show-projects[type=checkbox] {
+  display: none;
+}
+
+/*Show menu when invisible checkbox is checked*/
+/* line 81, ../scss/banner.scss */
+input#show-projects[type=checkbox]:checked ~ .contend {
+  display: block;
+}
+
+/* line 84, ../scss/banner.scss */
+.show-projects {
+  display: inline-block;
+  padding: 10px 20px 10px 20px;
+  background-color: #0051ff;
+  border-radius: 5px;
+  color: #fff;
+}
+/* line 91, ../scss/banner.scss */
+.show-projects:hover {
+  cursor: pointer;
+  background-color: #83aaff;
+}
+
+/* line 98, ../scss/banner.scss */
+.some-projects > .contend {
+  display: none;
+  margin: 50px auto 20px;
+  border-radius: 5px;
+  width: 80%;
+}
+
+/* line 107, ../scss/banner.scss */
+.some-projects {
+  text-align: center;
+  display: inline-block;
+  margin-top: 50px;
+  padding: 10px 30px 20px 30px;
+  width: 100%;
+}
+
+/* line 116, ../scss/banner.scss */
+.avi {
+  margin: 10px 20px 10px 20px;
+}
+/* line 118, ../scss/banner.scss */
+.avi img {
+  box-shadow: 1px 2px 3px #000;
+}
+
+/* repositores list */
+/* line 124, ../scss/banner.scss */
+.repolist {
+  display: block;
+  clear: both;
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+
+/* line 131, ../scss/banner.scss */
+.repolist ul {
+  font-size: 0.9em;
+}
+
+/* line 134, ../scss/banner.scss */
+.repolist ul li a {
+  padding: 6px 10px 9px;
+  margin: 10px 5px 10px;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #3673af;
+}
+
+/* line 144, ../scss/banner.scss */
+.repolist ul li a:hover {
+  background-color: #396895;
+}
+
+/* line 148, ../scss/banner.scss */
+.repolist ul li a span {
+  font-family: "Courier New", Courier, "Lucida Typewriter", monospace;
+  font-size: 0.9em;
 }

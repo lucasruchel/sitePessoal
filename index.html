@@ -35,7 +35,9 @@ and open the template in the editor.
                     </li>
                     <li class="nav-item">
                         <a href="index#sobre">Sobre Mim</a>
-                        
+                    </li>
+                    <li class="nav-item">
+                        <a href="index#contato"> Contato </a>
                     </li>
                 </ul> 
            </nav>
@@ -46,6 +48,16 @@ and open the template in the editor.
                     <img src="images/perfil.jpg" alt="foto pessoal" title="perfil" />
                 </div>
             </header>
+            
+            <aside class="some-projects">
+                <label for="show-projects" class="show-projects" id="projects">Alguns Projetos</label>
+                <input type="checkbox" id="show-projects" >
+                
+                <div class="contend" id="gh-contend">
+                    
+                </div>
+                
+            </aside>
         </section>
         <section id="cd-timeline" class="cd-container"  >
 		<div class="cd-timeline-block" id="sobre">
@@ -154,10 +166,42 @@ and open the template in the editor.
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 	</section> <!-- cd-timeline -->
+        <section class="formulario">
+            <header id="contato">
+                <h2 class="title">
+                    Entre em contato
+                </h2>
+            </header>
+             <div class="form">
+                 <form name="signIn" method="post" action="#" id="comment">
 
+                        <div class="form-group">
+                            <label for="name" class="control-label"> Nome </label>
+                            <input type="text" id="form-name" name="name" class="form-control" placeholder="Digite seu nome"/>
+                            <span class="alert"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="control-label">Endereço de Email</label>
+                            <input type="text" id="form-email" name="email" class="form-control" placeholder="Digite um email válido">
+                            <span class="alert"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="control-label">Endereço de Email</label>
+                            <textarea id="form-message" name="message" class="form-control comments" placeholder="Sinta-se a vontade..."></textarea>
+                            <span class="alert"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="button sign-in" value="Inscrever-se">
+                        </div>
+                    </form>
+                </div>
+            
+        </section>
 
         <script src='js/jquery.js'></script>
         <script src="js/index.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/gitHubProjects.js"></script>
+        <script src="js/formulario.js"></script>
     </body>
 </html>

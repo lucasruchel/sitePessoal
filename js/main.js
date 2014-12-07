@@ -3,23 +3,17 @@
 //Smooth scroll
 $(function() {
   $('a[href*=#]:not([href=#])').click(function() {
-    
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
-     // target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-       if (target.length) {
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
         $('html,body').animate({
-            //correction: anchor offset
-          scrollTop: target.offset().top-150
+          scrollTop: target.offset().top-100
         }, 1000);
-        //return false;
+        return false;
       }
-      
+    }
   });
 });
 
-$(document).ready(function(){
-        if (location.hash.length !== 0) {
-            window.scrollTo(window.scrollX, window.scrollY - 150);
-        }
-});
 

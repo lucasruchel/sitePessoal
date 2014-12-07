@@ -36,6 +36,9 @@
     }
     
 }
+.repolist ul li, li a{
+    display: inline-block;
+ }
 .presentation{
     min-width: 1000px;
     width: 100%;
@@ -45,6 +48,9 @@
 }
 }
 @media screen and (max-width : 999px){
+    .repolist ul li, li a{
+        display: block;
+     }
         .presentation{
             display: inline-block;
             max-width: 999px;
@@ -67,5 +73,80 @@
 
         }
      }
+input#show-projects[type=checkbox]{
+    display: none;
+}
+
+/*Show menu when invisible checkbox is checked*/
+input#show-projects[type=checkbox]:checked ~ .contend{
+    display: block;
+}
+.show-projects{
+    display: inline-block;
     
+    padding: 10px 20px 10px 20px;
+    background-color: #0051ff;
+    border-radius: 5px;
+    color: #fff;
+    &:hover{
+        cursor: pointer;
+        background-color: #83aaff;
+    }
+    
+}
+
+.some-projects > .contend{
+    display: none;
+    
+    margin: 50px auto 20px;
+    
+    border-radius: 5px;
+    width: 80%;
+    
+}
+.some-projects{
+    text-align: center;
+    display: inline-block;
+    margin-top: 50px;
+    
+    padding: 10px 30px 20px 30px;     
+    width: 100%;
+}
+
+.avi{
+    margin: 10px 20px 10px 20px;
+    img{
+        box-shadow: 1px 2px 3px #000;
+    }
+}
+
+/* repositores list */
+.repolist {
+  display: block;
+  clear: both;
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+.repolist ul {
+  font-size: 0.9em;
+}
+.repolist ul li a {
+  
+  padding: 6px 10px 9px;
+  
+  
+  margin: 10px 5px 10px;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #3673af;
+}
+.repolist ul li a:hover {
+  background-color: #396895;
+  
+}
+.repolist ul li a span {
+  font-family: "Courier New", Courier, "Lucida Typewriter", monospace;
+  font-size: 0.9em;
+}
     

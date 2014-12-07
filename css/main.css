@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Neucha);
-/* line 5, ../../../../.gem/ruby/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../.gem/ruby/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -21,45 +21,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../.gem/ruby/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../.gem/ruby/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../.gem/ruby/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../.gem/ruby/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../.gem/ruby/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../.gem/ruby/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../.gem/ruby/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../.gem/ruby/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../.gem/ruby/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../.gem/ruby/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../.gem/ruby/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../.gem/ruby/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../.gem/ruby/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../.gem/ruby/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../.gem/ruby/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../.gem/ruby/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -111,13 +111,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 /*Hide checkbox*/
 /* line 52, ../scss/navbar.scss */
-input[type=checkbox] {
+input#show-menu[type=checkbox] {
   display: none;
 }
 
 /*Show menu when invisible checkbox is checked*/
 /* line 57, ../scss/navbar.scss */
-input[type=checkbox]:checked ~ .nav {
+input#show-menu[type=checkbox]:checked ~ .nav {
   display: block;
 }
 
@@ -186,13 +186,23 @@ html {
   }
 
   /* line 39, ../scss/banner.scss */
+  .repolist ul li, li a {
+    display: inline-block;
+  }
+
+  /* line 42, ../scss/banner.scss */
   .presentation {
     min-width: 1000px;
     width: 100%;
   }
 }
 @media screen and (max-width: 999px) {
-  /* line 48, ../scss/banner.scss */
+  /* line 51, ../scss/banner.scss */
+  .repolist ul li, li a {
+    display: block;
+  }
+
+  /* line 54, ../scss/banner.scss */
   .presentation {
     display: inline-block;
     max-width: 999px;
@@ -203,16 +213,102 @@ html {
     min-height: 300px;
     vertical-align: middle;
   }
-  /* line 58, ../scss/banner.scss */
+  /* line 64, ../scss/banner.scss */
   .presentation .logo {
     z-index: 5;
     padding-top: 50px;
   }
-  /* line 64, ../scss/banner.scss */
+  /* line 70, ../scss/banner.scss */
   .presentation img {
     border-radius: 50%;
   }
 }
+/* line 76, ../scss/banner.scss */
+input#show-projects[type=checkbox] {
+  display: none;
+}
+
+/*Show menu when invisible checkbox is checked*/
+/* line 81, ../scss/banner.scss */
+input#show-projects[type=checkbox]:checked ~ .contend {
+  display: block;
+}
+
+/* line 84, ../scss/banner.scss */
+.show-projects {
+  display: inline-block;
+  padding: 10px 20px 10px 20px;
+  background-color: #0051ff;
+  border-radius: 5px;
+  color: #fff;
+}
+/* line 91, ../scss/banner.scss */
+.show-projects:hover {
+  cursor: pointer;
+  background-color: #83aaff;
+}
+
+/* line 98, ../scss/banner.scss */
+.some-projects > .contend {
+  display: none;
+  margin: 50px auto 20px;
+  border-radius: 5px;
+  width: 80%;
+}
+
+/* line 107, ../scss/banner.scss */
+.some-projects {
+  text-align: center;
+  display: inline-block;
+  margin-top: 50px;
+  padding: 10px 30px 20px 30px;
+  width: 100%;
+}
+
+/* line 116, ../scss/banner.scss */
+.avi {
+  margin: 10px 20px 10px 20px;
+}
+/* line 118, ../scss/banner.scss */
+.avi img {
+  box-shadow: 1px 2px 3px #000;
+}
+
+/* repositores list */
+/* line 124, ../scss/banner.scss */
+.repolist {
+  display: block;
+  clear: both;
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+
+/* line 131, ../scss/banner.scss */
+.repolist ul {
+  font-size: 0.9em;
+}
+
+/* line 134, ../scss/banner.scss */
+.repolist ul li a {
+  padding: 6px 10px 9px;
+  margin: 10px 5px 10px;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #3673af;
+}
+
+/* line 144, ../scss/banner.scss */
+.repolist ul li a:hover {
+  background-color: #396895;
+}
+
+/* line 148, ../scss/banner.scss */
+.repolist ul li a span {
+  font-family: "Courier New", Courier, "Lucida Typewriter", monospace;
+  font-size: 0.9em;
+}
+
 /* -------------------------------- 
 
 Primary style
@@ -287,40 +383,14 @@ Modules - reusable parts of our design
 Main components 
 
 -------------------------------- */
-/* line 126, ../scss/timeline.scss */
-header {
-  height: 200px;
-  line-height: 200px;
-  text-align: center;
-  background: #303e49;
-}
-/* line 132, ../scss/timeline.scss */
-header h1 {
-  color: #ffffff;
-  font-size: 18px;
-  font-size: 1.125rem;
-}
-@media only screen and (min-width: 1170px) {
-  /* line 126, ../scss/timeline.scss */
-  header {
-    height: 300px;
-    line-height: 300px;
-  }
-  /* line 141, ../scss/timeline.scss */
-  header h1 {
-    font-size: 24px;
-    font-size: 1.5rem;
-  }
-}
-
-/* line 147, ../scss/timeline.scss */
+/* line 128, ../scss/timeline.scss */
 #cd-timeline {
   position: relative;
   padding: 2em 0;
   margin-top: 2em;
   margin-bottom: 2em;
 }
-/* line 155, ../scss/timeline.scss */
+/* line 136, ../scss/timeline.scss */
 #cd-timeline::before {
   /* this is the vertical line */
   content: '';
@@ -332,49 +402,49 @@ header h1 {
   background: #b4ccdd;
 }
 @media only screen and (min-width: 1170px) {
-  /* line 147, ../scss/timeline.scss */
+  /* line 128, ../scss/timeline.scss */
   #cd-timeline {
     margin-top: 3em;
     margin-bottom: 3em;
   }
-  /* line 172, ../scss/timeline.scss */
+  /* line 153, ../scss/timeline.scss */
   #cd-timeline::before {
     left: 50%;
     margin-left: -2px;
   }
 }
 
-/* line 179, ../scss/timeline.scss */
+/* line 160, ../scss/timeline.scss */
 .cd-timeline-block {
   position: relative;
   margin: 2em 0;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 185, ../scss/timeline.scss */
+/* line 166, ../scss/timeline.scss */
 .cd-timeline-block:first-child {
   margin-top: 0;
 }
-/* line 189, ../scss/timeline.scss */
+/* line 170, ../scss/timeline.scss */
 .cd-timeline-block:last-child {
   margin-bottom: 0;
 }
 @media only screen and (min-width: 1170px) {
-  /* line 179, ../scss/timeline.scss */
+  /* line 160, ../scss/timeline.scss */
   .cd-timeline-block {
     margin: 4em 0;
   }
-  /* line 196, ../scss/timeline.scss */
+  /* line 177, ../scss/timeline.scss */
   .cd-timeline-block:first-child {
     margin-top: 0;
   }
-  /* line 200, ../scss/timeline.scss */
+  /* line 181, ../scss/timeline.scss */
   .cd-timeline-block:last-child {
     margin-bottom: 0;
   }
 }
 
-/* line 206, ../scss/timeline.scss */
+/* line 187, ../scss/timeline.scss */
 .cd-timeline-img {
   position: absolute;
   top: 0;
@@ -384,7 +454,7 @@ header h1 {
   border-radius: 50%;
   box-shadow: 0 0 0 4px #ffffff, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
 }
-/* line 215, ../scss/timeline.scss */
+/* line 196, ../scss/timeline.scss */
 .cd-timeline-img img {
   display: block;
   width: 24px;
@@ -395,20 +465,20 @@ header h1 {
   margin-left: -12px;
   margin-top: -12px;
 }
-/* line 226, ../scss/timeline.scss */
+/* line 207, ../scss/timeline.scss */
 .cd-timeline-img.cd-picture {
   background: #75ce66;
 }
-/* line 230, ../scss/timeline.scss */
+/* line 211, ../scss/timeline.scss */
 .cd-timeline-img.cd-movie {
   background: #c03b44;
 }
-/* line 234, ../scss/timeline.scss */
+/* line 215, ../scss/timeline.scss */
 .cd-timeline-img.cd-location {
   background: #f0ca45;
 }
 @media only screen and (min-width: 1170px) {
-  /* line 206, ../scss/timeline.scss */
+  /* line 187, ../scss/timeline.scss */
   .cd-timeline-img {
     width: 60px;
     height: 60px;
@@ -418,11 +488,11 @@ header h1 {
     -webkit-transform: translateZ(0);
     -webkit-backface-visibility: hidden;
   }
-  /* line 248, ../scss/timeline.scss */
+  /* line 229, ../scss/timeline.scss */
   .cssanimations .cd-timeline-img.is-hidden {
     visibility: hidden;
   }
-  /* line 252, ../scss/timeline.scss */
+  /* line 233, ../scss/timeline.scss */
   .cssanimations .cd-timeline-img.bounce-in {
     visibility: visible;
     -moz-animation: cd-bounce-1 0.6s;
@@ -485,7 +555,7 @@ header h1 {
     transform: scale(1);
   }
 }
-/* line 275, ../scss/timeline.scss */
+/* line 256, ../scss/timeline.scss */
 .cd-timeline-content {
   position: relative;
   margin-left: 60px;
@@ -496,25 +566,25 @@ header h1 {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 285, ../scss/timeline.scss */
+/* line 266, ../scss/timeline.scss */
 .cd-timeline-content h2 {
   color: #303e49;
 }
-/* line 289, ../scss/timeline.scss */
+/* line 270, ../scss/timeline.scss */
 .cd-timeline-content p, .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
   font-size: 13px;
   font-size: 0.8125rem;
 }
-/* line 293, ../scss/timeline.scss */
+/* line 274, ../scss/timeline.scss */
 .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
   display: inline-block;
 }
-/* line 297, ../scss/timeline.scss */
+/* line 278, ../scss/timeline.scss */
 .cd-timeline-content p {
   margin: 1em 0;
   line-height: 1.6;
 }
-/* line 302, ../scss/timeline.scss */
+/* line 283, ../scss/timeline.scss */
 .cd-timeline-content .cd-read-more {
   float: right;
   padding: .8em 1em;
@@ -522,17 +592,17 @@ header h1 {
   color: #ffffff;
   border-radius: 0.25em;
 }
-/* line 309, ../scss/timeline.scss */
+/* line 290, ../scss/timeline.scss */
 .no-touch .cd-timeline-content .cd-read-more:hover {
   background-color: #bac4cb;
 }
-/* line 314, ../scss/timeline.scss */
+/* line 295, ../scss/timeline.scss */
 .cd-timeline-content .cd-date {
   float: left;
   padding: .8em 0;
   opacity: .7;
 }
-/* line 320, ../scss/timeline.scss */
+/* line 301, ../scss/timeline.scss */
 .cd-timeline-content::before {
   content: '';
   position: absolute;
@@ -544,41 +614,41 @@ header h1 {
   border-right: 7px solid #ffffff;
 }
 @media only screen and (min-width: 768px) {
-  /* line 332, ../scss/timeline.scss */
+  /* line 313, ../scss/timeline.scss */
   .cd-timeline-content h2 {
     font-size: 20px;
     font-size: 1.25rem;
   }
-  /* line 336, ../scss/timeline.scss */
+  /* line 317, ../scss/timeline.scss */
   .cd-timeline-content p {
     font-size: 16px;
     font-size: 1rem;
   }
-  /* line 340, ../scss/timeline.scss */
+  /* line 321, ../scss/timeline.scss */
   .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
     font-size: 14px;
     font-size: 0.875rem;
   }
 }
 @media only screen and (min-width: 1170px) {
-  /* line 275, ../scss/timeline.scss */
+  /* line 256, ../scss/timeline.scss */
   .cd-timeline-content {
     margin-left: 0;
     padding: 1.6em;
     width: 45%;
   }
-  /* line 350, ../scss/timeline.scss */
+  /* line 331, ../scss/timeline.scss */
   .cd-timeline-content::before {
     top: 24px;
     left: 100%;
     border-color: transparent;
     border-left-color: #ffffff;
   }
-  /* line 357, ../scss/timeline.scss */
+  /* line 338, ../scss/timeline.scss */
   .cd-timeline-content .cd-read-more {
     float: left;
   }
-  /* line 361, ../scss/timeline.scss */
+  /* line 342, ../scss/timeline.scss */
   .cd-timeline-content .cd-date {
     position: absolute;
     width: 100%;
@@ -587,11 +657,11 @@ header h1 {
     font-size: 16px;
     font-size: 1rem;
   }
-  /* line 369, ../scss/timeline.scss */
+  /* line 350, ../scss/timeline.scss */
   .cd-timeline-block:nth-child(even) .cd-timeline-content {
     float: right;
   }
-  /* line 372, ../scss/timeline.scss */
+  /* line 353, ../scss/timeline.scss */
   .cd-timeline-block:nth-child(even) .cd-timeline-content::before {
     top: 24px;
     left: auto;
@@ -599,21 +669,21 @@ header h1 {
     border-color: transparent;
     border-right-color: #ffffff;
   }
-  /* line 380, ../scss/timeline.scss */
+  /* line 361, ../scss/timeline.scss */
   .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
     float: right;
   }
-  /* line 384, ../scss/timeline.scss */
+  /* line 365, ../scss/timeline.scss */
   .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date {
     left: auto;
     right: 122%;
     text-align: right;
   }
-  /* line 391, ../scss/timeline.scss */
+  /* line 372, ../scss/timeline.scss */
   .cssanimations .cd-timeline-content.is-hidden {
     visibility: hidden;
   }
-  /* line 395, ../scss/timeline.scss */
+  /* line 376, ../scss/timeline.scss */
   .cssanimations .cd-timeline-content.bounce-in {
     visibility: visible;
     -moz-animation: cd-bounce-2 0.6s;
@@ -624,7 +694,7 @@ header h1 {
 
 @media only screen and (min-width: 1170px) {
   /* inverse bounce effect on even content blocks */
-  /* line 404, ../scss/timeline.scss */
+  /* line 385, ../scss/timeline.scss */
   .cssanimations .cd-timeline-block:nth-child(even) .cd-timeline-content.bounce-in {
     -moz-animation: cd-bounce-2-inverse 0.6s;
     -webkit-animation: cd-bounce-2-inverse 0.6s;
@@ -738,4 +808,117 @@ header h1 {
     -webkit-transform: translateX(0);
     transform: translateX(0);
   }
+}
+/* line 2, ../scss/formulario.scss */
+.form {
+  max-width: 500px;
+  width: 100%;
+  margin: 30px auto;
+}
+
+/* line 9, ../scss/formulario.scss */
+.form-group {
+  padding: 0 0 15px 0;
+}
+
+/* line 13, ../scss/formulario.scss */
+.form-control {
+  background-color: #fff;
+  cursor: text;
+  border: solid 1px #dedede;
+  box-sizing: border-box;
+  color: #4c4c4c;
+  height: 40px;
+  outline: none;
+  padding: 8px 15px;
+  width: 100%;
+}
+
+/* line 27, ../scss/formulario.scss */
+.form-control:focus {
+  border: solid 1px #4409f6;
+}
+
+/* line 31, ../scss/formulario.scss */
+input::-webkit-input-placeholder {
+  text-transform: uppercase;
+  font-style: bold;
+}
+
+/* line 36, ../scss/formulario.scss */
+input::-moz-placeholder {
+  text-transform: uppercase;
+  font-style: bold;
+}
+
+/* line 41, ../scss/formulario.scss */
+.control-label {
+  display: none;
+}
+
+/* line 45, ../scss/formulario.scss */
+.sign-in {
+  width: 100%;
+  background-color: #14b9d6;
+  border: solid 1px transparent;
+  color: #fff;
+  height: 42px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  transition: background-color 0.5s;
+}
+
+/* line 57, ../scss/formulario.scss */
+.sign-in:hover {
+  background-color: #d409f6;
+  cursor: pointer;
+}
+
+/* line 62, ../scss/formulario.scss */
+.alert {
+  display: inline-block;
+  color: #fff;
+  width: 100%;
+  padding: 5px 10px 5px 10px;
+  margin: -5px -10px -5px -10px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 10pt;
+  height: 16px;
+}
+
+/* line 75, ../scss/formulario.scss */
+.alert-error {
+  background-color: #FA8072;
+}
+
+/* line 80, ../scss/formulario.scss */
+textarea {
+  resize: vertical;
+  max-height: 300px;
+  min-height: 200px;
+}
+
+/* line 81, ../scss/formulario.scss */
+textarea.horiz {
+  resize: horizontal;
+  max-width: 400px;
+  min-width: 200px;
+}
+
+/* line 83, ../scss/formulario.scss */
+#contato {
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  min-height: 80px;
+  background-color: #578cfe;
+}
+
+/* line 91, ../scss/formulario.scss */
+#contato .title {
+  margin-top: 30px;
+  color: #fff;
+  text-transform: uppercase;
 }

@@ -1,0 +1,113 @@
+/* line 2, ../scss/formulario.scss */
+.form {
+  max-width: 500px;
+  width: 100%;
+  margin: 30px auto;
+}
+
+/* line 9, ../scss/formulario.scss */
+.form-group {
+  padding: 0 0 15px 0;
+}
+
+/* line 13, ../scss/formulario.scss */
+.form-control {
+  background-color: #fff;
+  cursor: text;
+  border: solid 1px #dedede;
+  box-sizing: border-box;
+  color: #4c4c4c;
+  height: 40px;
+  outline: none;
+  padding: 8px 15px;
+  width: 100%;
+}
+
+/* line 27, ../scss/formulario.scss */
+.form-control:focus {
+  border: solid 1px #4409f6;
+}
+
+/* line 31, ../scss/formulario.scss */
+input::-webkit-input-placeholder {
+  text-transform: uppercase;
+  font-style: bold;
+}
+
+/* line 36, ../scss/formulario.scss */
+input::-moz-placeholder {
+  text-transform: uppercase;
+  font-style: bold;
+}
+
+/* line 41, ../scss/formulario.scss */
+.control-label {
+  display: none;
+}
+
+/* line 45, ../scss/formulario.scss */
+.sign-in {
+  width: 100%;
+  background-color: #14b9d6;
+  border: solid 1px transparent;
+  color: #fff;
+  height: 42px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  transition: background-color 0.5s;
+}
+
+/* line 57, ../scss/formulario.scss */
+.sign-in:hover {
+  background-color: #d409f6;
+  cursor: pointer;
+}
+
+/* line 62, ../scss/formulario.scss */
+.alert {
+  display: inline-block;
+  color: #fff;
+  width: 100%;
+  padding: 5px 10px 5px 10px;
+  margin: -5px -10px -5px -10px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 10pt;
+  height: 16px;
+}
+
+/* line 75, ../scss/formulario.scss */
+.alert-error {
+  background-color: #FA8072;
+}
+
+/* line 80, ../scss/formulario.scss */
+textarea {
+  resize: vertical;
+  max-height: 300px;
+  min-height: 200px;
+}
+
+/* line 81, ../scss/formulario.scss */
+textarea.horiz {
+  resize: horizontal;
+  max-width: 400px;
+  min-width: 200px;
+}
+
+/* line 83, ../scss/formulario.scss */
+#contato {
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  min-height: 80px;
+  background-color: #578cfe;
+}
+
+/* line 91, ../scss/formulario.scss */
+#contato .title {
+  margin-top: 30px;
+  color: #fff;
+  text-transform: uppercase;
+}

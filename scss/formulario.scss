@@ -1,0 +1,95 @@
+
+.form
+{
+    max-width: 500px;
+    width: 100%;
+    margin: 30px auto;
+    
+}
+.form-group
+{
+    padding: 0 0 15px 0;
+}
+.form-control
+{
+    background-color: #fff;
+    cursor: text;
+    border: solid 1px #dedede; 
+    box-sizing: border-box;
+    color: #4c4c4c;
+    height: 40px;
+  
+    outline: none;
+    padding: 8px 15px;
+    width:100%;
+}
+
+.form-control:focus
+{
+    border: solid 1px #4409f6;
+}
+input::-webkit-input-placeholder
+{
+    text-transform: uppercase;
+    font-style: bold;
+}
+input::-moz-placeholder
+{
+    text-transform: uppercase;
+    font-style: bold;   
+}
+.control-label
+{
+    display: none;
+}
+.sign-in
+{
+    width: 100%;
+    background-color: #14b9d6;
+    border: solid 1px transparent;
+    color: #fff;
+    height: 42px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    transition: background-color 0.5s;
+}
+.sign-in:hover
+{
+    background-color: #d409f6;
+    cursor: pointer;
+}
+.alert
+{
+    display: inline-block;
+    color: #fff;
+    width: 100%;
+    padding: 5px 10px 5px 10px;
+    margin: -5px -10px -5px -10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 10pt;
+    height: 16px;
+
+}
+.alert-error
+{
+    background-color: #FA8072;
+}
+
+textarea { resize:vertical; max-height:300px; min-height:200px; }
+textarea.horiz { resize:horizontal; max-width:400px; min-width:200px; }
+
+#contato{
+    text-align: center;
+    display: inline-block;
+    width:100%;
+    min-height: 80px;
+    
+    background-color: #578cfe;
+}
+#contato .title{
+    margin-top: 30px;
+    color: #fff;
+    text-transform: uppercase;
+}
