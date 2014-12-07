@@ -1,0 +1,71 @@
+@import 'utilities/variables';
+
+
+
+@media screen and (min-width : 1000px){
+    .default-style{
+    
+    
+    margin-top: #{$navHeight+20px};
+    background-color: #61b2b7;
+    position: relative;
+    min-height: 300px;
+    
+    &:after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        bottom: 0;
+        right: 0;
+        background-color: #00f0ff;
+    }
+    
+    .logo{
+        
+        z-index: 5;
+        position: absolute;
+        left: 50%;
+        margin-left: -7.5%;
+        margin-top: 50px;
+        position: absolute;
+        
+    }
+    img{
+        border-radius: 50%;
+    }
+    
+}
+.presentation{
+    min-width: 1000px;
+    width: 100%;
+    
+    @extend .default-style;
+    
+}
+}
+@media screen and (max-width : 999px){
+        .presentation{
+            display: inline-block;
+            max-width: 999px;
+            width: 100%;
+            margin-top: #{$navHeight+20px};
+            background-color: #61b2b7;
+            position: relative;
+            min-height: 300px;
+            
+            vertical-align: middle;
+            .logo{
+
+                z-index: 5;
+                padding-top: 50px;
+                
+            }
+            img{
+                border-radius: 50%;
+            }
+
+        }
+     }
+    
+    

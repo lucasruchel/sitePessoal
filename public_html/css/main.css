@@ -1,0 +1,741 @@
+@import url(http://fonts.googleapis.com/css?family=Neucha);
+/* line 5, ../../../../.gem/ruby/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../.gem/ruby/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../.gem/ruby/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../.gem/ruby/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../.gem/ruby/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../.gem/ruby/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../.gem/ruby/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../.gem/ruby/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../.gem/ruby/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 6, ../scss/navbar.scss */
+.navbar {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-family: Neucha, arial;
+  padding: 10px 5px;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  display: block;
+  width: 100%;
+  background-color: #9190fe;
+}
+/* line 19, ../scss/navbar.scss */
+.navbar .nav {
+  text-align: center;
+  color: #fff;
+}
+/* line 22, ../scss/navbar.scss */
+.navbar .nav li {
+  display: inline-block;
+  margin: 10px 10px;
+}
+/* line 26, ../scss/navbar.scss */
+.navbar .nav li > * {
+  color: #fff;
+}
+/* line 29, ../scss/navbar.scss */
+.navbar .nav li > *:hover {
+  color: #075757;
+  cursor: pointer;
+}
+
+/*Style 'show menu' label button and hide it by default*/
+/* line 41, ../scss/navbar.scss */
+.show-menu {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  color: #fff;
+  background: #6665fa;
+  text-align: center;
+  padding: 10px 0;
+  display: none;
+}
+
+/*Hide checkbox*/
+/* line 52, ../scss/navbar.scss */
+input[type=checkbox] {
+  display: none;
+}
+
+/*Show menu when invisible checkbox is checked*/
+/* line 57, ../scss/navbar.scss */
+input[type=checkbox]:checked ~ .nav {
+  display: block;
+}
+
+/*Responsive Styles*/
+@media screen and (max-width: 760px) {
+  /*Make dropdown links appear inline*/
+  /* line 66, ../scss/navbar.scss */
+  .nav {
+    position: static;
+    display: none;
+  }
+
+  /*Create vertical spacing*/
+  /* line 71, ../scss/navbar.scss */
+  .nav-item {
+    margin-bottom: 1px;
+  }
+
+  /*Make all menu links full width*/
+  /* line 75, ../scss/navbar.scss */
+  .nav .nav-item, li a {
+    width: 100%;
+  }
+
+  /*Display 'show menu' link*/
+  /* line 79, ../scss/navbar.scss */
+  .show-menu {
+    display: block;
+  }
+}
+/* line 84, ../scss/navbar.scss */
+html {
+  margin-top: 60px;
+}
+
+@media screen and (min-width: 1000px) {
+  /* line 6, ../scss/banner.scss */
+  .default-style, .presentation {
+    margin-top: 70px;
+    background-color: #61b2b7;
+    position: relative;
+    min-height: 300px;
+  }
+  /* line 14, ../scss/banner.scss */
+  .default-style:after, .presentation:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    bottom: 0;
+    right: 0;
+    background-color: #00f0ff;
+  }
+  /* line 24, ../scss/banner.scss */
+  .default-style .logo, .presentation .logo {
+    z-index: 5;
+    position: absolute;
+    left: 50%;
+    margin-left: -7.5%;
+    margin-top: 50px;
+    position: absolute;
+  }
+  /* line 34, ../scss/banner.scss */
+  .default-style img, .presentation img {
+    border-radius: 50%;
+  }
+
+  /* line 39, ../scss/banner.scss */
+  .presentation {
+    min-width: 1000px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 999px) {
+  /* line 48, ../scss/banner.scss */
+  .presentation {
+    display: inline-block;
+    max-width: 999px;
+    width: 100%;
+    margin-top: 70px;
+    background-color: #61b2b7;
+    position: relative;
+    min-height: 300px;
+    vertical-align: middle;
+  }
+  /* line 58, ../scss/banner.scss */
+  .presentation .logo {
+    z-index: 5;
+    padding-top: 50px;
+  }
+  /* line 64, ../scss/banner.scss */
+  .presentation img {
+    border-radius: 50%;
+  }
+}
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+/* line 67, ../scss/timeline.scss */
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 72, ../scss/timeline.scss */
+*, *:after, *:before {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 76, ../scss/timeline.scss */
+body {
+  font-size: 100%;
+  font-family: "Droid Serif", serif;
+  color: #7f8c97;
+  background-color: #e9f0f5;
+}
+
+/* line 85, ../scss/timeline.scss */
+a {
+  color: #acb7c0;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* line 91, ../scss/timeline.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 95, ../scss/timeline.scss */
+h1, h2 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+}
+
+/* line 99, ../scss/timeline.scss */
+.list-group .list-group-item {
+  line-height: 30pt;
+}
+
+/* -------------------------------- 
+
+Modules - reusable parts of our design
+
+-------------------------------- */
+/* line 108, ../scss/timeline.scss */
+.cd-container {
+  /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+  width: 90%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+/* line 113, ../scss/timeline.scss */
+.cd-container::after {
+  /* clearfix */
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* -------------------------------- 
+
+Main components 
+
+-------------------------------- */
+/* line 126, ../scss/timeline.scss */
+header {
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+  background: #303e49;
+}
+/* line 132, ../scss/timeline.scss */
+header h1 {
+  color: #ffffff;
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+@media only screen and (min-width: 1170px) {
+  /* line 126, ../scss/timeline.scss */
+  header {
+    height: 300px;
+    line-height: 300px;
+  }
+  /* line 141, ../scss/timeline.scss */
+  header h1 {
+    font-size: 24px;
+    font-size: 1.5rem;
+  }
+}
+
+/* line 147, ../scss/timeline.scss */
+#cd-timeline {
+  position: relative;
+  padding: 2em 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+/* line 155, ../scss/timeline.scss */
+#cd-timeline::before {
+  /* this is the vertical line */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 18px;
+  height: 100%;
+  width: 4px;
+  background: #b4ccdd;
+}
+@media only screen and (min-width: 1170px) {
+  /* line 147, ../scss/timeline.scss */
+  #cd-timeline {
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+  /* line 172, ../scss/timeline.scss */
+  #cd-timeline::before {
+    left: 50%;
+    margin-left: -2px;
+  }
+}
+
+/* line 179, ../scss/timeline.scss */
+.cd-timeline-block {
+  position: relative;
+  margin: 2em 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 185, ../scss/timeline.scss */
+.cd-timeline-block:first-child {
+  margin-top: 0;
+}
+/* line 189, ../scss/timeline.scss */
+.cd-timeline-block:last-child {
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 1170px) {
+  /* line 179, ../scss/timeline.scss */
+  .cd-timeline-block {
+    margin: 4em 0;
+  }
+  /* line 196, ../scss/timeline.scss */
+  .cd-timeline-block:first-child {
+    margin-top: 0;
+  }
+  /* line 200, ../scss/timeline.scss */
+  .cd-timeline-block:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* line 206, ../scss/timeline.scss */
+.cd-timeline-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px #ffffff, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+}
+/* line 215, ../scss/timeline.scss */
+.cd-timeline-img img {
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  margin-left: -12px;
+  margin-top: -12px;
+}
+/* line 226, ../scss/timeline.scss */
+.cd-timeline-img.cd-picture {
+  background: #75ce66;
+}
+/* line 230, ../scss/timeline.scss */
+.cd-timeline-img.cd-movie {
+  background: #c03b44;
+}
+/* line 234, ../scss/timeline.scss */
+.cd-timeline-img.cd-location {
+  background: #f0ca45;
+}
+@media only screen and (min-width: 1170px) {
+  /* line 206, ../scss/timeline.scss */
+  .cd-timeline-img {
+    width: 60px;
+    height: 60px;
+    left: 50%;
+    margin-left: -30px;
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+  }
+  /* line 248, ../scss/timeline.scss */
+  .cssanimations .cd-timeline-img.is-hidden {
+    visibility: hidden;
+  }
+  /* line 252, ../scss/timeline.scss */
+  .cssanimations .cd-timeline-img.bounce-in {
+    visibility: visible;
+    -moz-animation: cd-bounce-1 0.6s;
+    -webkit-animation: cd-bounce-1 0.6s;
+    animation: cd-bounce-1 0.6s;
+  }
+}
+
+@-moz-keyframes cd-bounce-1 {
+  0% {
+    opacity: 0;
+    -moz-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  60% {
+    opacity: 1;
+    -moz-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  100% {
+    -moz-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes cd-bounce-1 {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes cd-bounce-1 {
+  0% {
+    opacity: 0;
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  60% {
+    opacity: 1;
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  100% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+/* line 275, ../scss/timeline.scss */
+.cd-timeline-content {
+  position: relative;
+  margin-left: 60px;
+  background: #ffffff;
+  border-radius: 0.25em;
+  padding: 1em;
+  box-shadow: 0 3px 0 #d7e4ed;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 285, ../scss/timeline.scss */
+.cd-timeline-content h2 {
+  color: #303e49;
+}
+/* line 289, ../scss/timeline.scss */
+.cd-timeline-content p, .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
+  font-size: 13px;
+  font-size: 0.8125rem;
+}
+/* line 293, ../scss/timeline.scss */
+.cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
+  display: inline-block;
+}
+/* line 297, ../scss/timeline.scss */
+.cd-timeline-content p {
+  margin: 1em 0;
+  line-height: 1.6;
+}
+/* line 302, ../scss/timeline.scss */
+.cd-timeline-content .cd-read-more {
+  float: right;
+  padding: .8em 1em;
+  background: #acb7c0;
+  color: #ffffff;
+  border-radius: 0.25em;
+}
+/* line 309, ../scss/timeline.scss */
+.no-touch .cd-timeline-content .cd-read-more:hover {
+  background-color: #bac4cb;
+}
+/* line 314, ../scss/timeline.scss */
+.cd-timeline-content .cd-date {
+  float: left;
+  padding: .8em 0;
+  opacity: .7;
+}
+/* line 320, ../scss/timeline.scss */
+.cd-timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 16px;
+  right: 100%;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-right: 7px solid #ffffff;
+}
+@media only screen and (min-width: 768px) {
+  /* line 332, ../scss/timeline.scss */
+  .cd-timeline-content h2 {
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+  /* line 336, ../scss/timeline.scss */
+  .cd-timeline-content p {
+    font-size: 16px;
+    font-size: 1rem;
+  }
+  /* line 340, ../scss/timeline.scss */
+  .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
+    font-size: 14px;
+    font-size: 0.875rem;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  /* line 275, ../scss/timeline.scss */
+  .cd-timeline-content {
+    margin-left: 0;
+    padding: 1.6em;
+    width: 45%;
+  }
+  /* line 350, ../scss/timeline.scss */
+  .cd-timeline-content::before {
+    top: 24px;
+    left: 100%;
+    border-color: transparent;
+    border-left-color: #ffffff;
+  }
+  /* line 357, ../scss/timeline.scss */
+  .cd-timeline-content .cd-read-more {
+    float: left;
+  }
+  /* line 361, ../scss/timeline.scss */
+  .cd-timeline-content .cd-date {
+    position: absolute;
+    width: 100%;
+    left: 122%;
+    top: 6px;
+    font-size: 16px;
+    font-size: 1rem;
+  }
+  /* line 369, ../scss/timeline.scss */
+  .cd-timeline-block:nth-child(even) .cd-timeline-content {
+    float: right;
+  }
+  /* line 372, ../scss/timeline.scss */
+  .cd-timeline-block:nth-child(even) .cd-timeline-content::before {
+    top: 24px;
+    left: auto;
+    right: 100%;
+    border-color: transparent;
+    border-right-color: #ffffff;
+  }
+  /* line 380, ../scss/timeline.scss */
+  .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
+    float: right;
+  }
+  /* line 384, ../scss/timeline.scss */
+  .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date {
+    left: auto;
+    right: 122%;
+    text-align: right;
+  }
+  /* line 391, ../scss/timeline.scss */
+  .cssanimations .cd-timeline-content.is-hidden {
+    visibility: hidden;
+  }
+  /* line 395, ../scss/timeline.scss */
+  .cssanimations .cd-timeline-content.bounce-in {
+    visibility: visible;
+    -moz-animation: cd-bounce-2 0.6s;
+    -webkit-animation: cd-bounce-2 0.6s;
+    animation: cd-bounce-2 0.6s;
+  }
+}
+
+@media only screen and (min-width: 1170px) {
+  /* inverse bounce effect on even content blocks */
+  /* line 404, ../scss/timeline.scss */
+  .cssanimations .cd-timeline-block:nth-child(even) .cd-timeline-content.bounce-in {
+    -moz-animation: cd-bounce-2-inverse 0.6s;
+    -webkit-animation: cd-bounce-2-inverse 0.6s;
+    animation: cd-bounce-2-inverse 0.6s;
+  }
+}
+@-moz-keyframes cd-bounce-2 {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(-100px);
+    transform: translateX(-100px);
+  }
+  60% {
+    opacity: 1;
+    -moz-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+  100% {
+    -moz-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes cd-bounce-2 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes cd-bounce-2 {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(-100px);
+    -ms-transform: translateX(-100px);
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+  }
+  60% {
+    opacity: 1;
+    -moz-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    -webkit-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+  100% {
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@-moz-keyframes cd-bounce-2-inverse {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+  60% {
+    opacity: 1;
+    -moz-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+  100% {
+    -moz-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes cd-bounce-2-inverse {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes cd-bounce-2-inverse {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(100px);
+    -ms-transform: translateX(100px);
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+  60% {
+    opacity: 1;
+    -moz-transform: translateX(-20px);
+    -ms-transform: translateX(-20px);
+    -webkit-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+  100% {
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,89 @@
+@import url(http://fonts.googleapis.com/css?family=Neucha);
+/* line 6, ../scss/navbar.scss */
+.navbar {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-family: Neucha, arial;
+  padding: 10px 5px;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  display: block;
+  width: 100%;
+  background-color: #9190fe;
+}
+/* line 19, ../scss/navbar.scss */
+.navbar .nav {
+  text-align: center;
+  color: #fff;
+}
+/* line 22, ../scss/navbar.scss */
+.navbar .nav li {
+  display: inline-block;
+  margin: 10px 10px;
+}
+/* line 26, ../scss/navbar.scss */
+.navbar .nav li > * {
+  color: #fff;
+}
+/* line 29, ../scss/navbar.scss */
+.navbar .nav li > *:hover {
+  color: #075757;
+  cursor: pointer;
+}
+
+/*Style 'show menu' label button and hide it by default*/
+/* line 41, ../scss/navbar.scss */
+.show-menu {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  color: #fff;
+  background: #6665fa;
+  text-align: center;
+  padding: 10px 0;
+  display: none;
+}
+
+/*Hide checkbox*/
+/* line 52, ../scss/navbar.scss */
+input[type=checkbox] {
+  display: none;
+}
+
+/*Show menu when invisible checkbox is checked*/
+/* line 57, ../scss/navbar.scss */
+input[type=checkbox]:checked ~ .nav {
+  display: block;
+}
+
+/*Responsive Styles*/
+@media screen and (max-width: 760px) {
+  /*Make dropdown links appear inline*/
+  /* line 66, ../scss/navbar.scss */
+  .nav {
+    position: static;
+    display: none;
+  }
+
+  /*Create vertical spacing*/
+  /* line 71, ../scss/navbar.scss */
+  .nav-item {
+    margin-bottom: 1px;
+  }
+
+  /*Make all menu links full width*/
+  /* line 75, ../scss/navbar.scss */
+  .nav .nav-item, li a {
+    width: 100%;
+  }
+
+  /*Display 'show menu' link*/
+  /* line 79, ../scss/navbar.scss */
+  .show-menu {
+    display: block;
+  }
+}
+/* line 84, ../scss/navbar.scss */
+html {
+  margin-top: 60px;
+}

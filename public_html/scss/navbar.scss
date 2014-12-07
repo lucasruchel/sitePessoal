@@ -1,0 +1,87 @@
+@import url(http://fonts.googleapis.com/css?family=Neucha); 
+@import 'utilities/variables';
+
+
+
+.navbar
+{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-family: Neucha, arial;
+    padding: 10px 5px;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    display: block;
+    width: 100%;
+    background-color: #9190fe;
+    
+    .nav {
+        text-align: center;
+        color: #fff;
+        li {
+            
+            display: inline-block;
+            margin: 10px 10px;
+            & > *{
+                color: #fff;
+            }
+            & > *:hover{
+                color: #075757;
+                
+                cursor: pointer;
+            }
+        }
+    }
+    
+}
+
+
+/*Style 'show menu' label button and hide it by default*/
+.show-menu {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-decoration: none;
+	color: #fff;
+        background: #6665fa;
+	text-align: center;
+	padding: 10px 0;
+	display: none;
+}
+
+/*Hide checkbox*/
+input[type=checkbox]{
+    display: none;
+}
+
+/*Show menu when invisible checkbox is checked*/
+input[type=checkbox]:checked ~ .nav{
+    display: block;
+}
+
+
+/*Responsive Styles*/
+
+@media screen and (max-width : 760px){
+	/*Make dropdown links appear inline*/
+	.nav {
+		position: static;
+		display: none;
+	}
+	/*Create vertical spacing*/
+	.nav-item {
+		margin-bottom: 1px;
+	}
+	/*Make all menu links full width*/
+	.nav .nav-item, li a {
+		width: 100%;
+	}
+	/*Display 'show menu' link*/
+	.show-menu {
+		display:block;
+	}
+}
+
+html{
+    margin-top: $navHeight+10;
+}
+

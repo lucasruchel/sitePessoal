@@ -1,0 +1,60 @@
+@media screen and (min-width: 1000px) {
+  /* line 6, ../scss/banner.scss */
+  .default-style, .presentation {
+    margin-top: 70px;
+    background-color: #61b2b7;
+    position: relative;
+    min-height: 300px;
+  }
+  /* line 14, ../scss/banner.scss */
+  .default-style:after, .presentation:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    bottom: 0;
+    right: 0;
+    background-color: #00f0ff;
+  }
+  /* line 24, ../scss/banner.scss */
+  .default-style .logo, .presentation .logo {
+    z-index: 5;
+    position: absolute;
+    left: 50%;
+    margin-left: -7.5%;
+    margin-top: 50px;
+    position: absolute;
+  }
+  /* line 34, ../scss/banner.scss */
+  .default-style img, .presentation img {
+    border-radius: 50%;
+  }
+
+  /* line 39, ../scss/banner.scss */
+  .presentation {
+    min-width: 1000px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 999px) {
+  /* line 48, ../scss/banner.scss */
+  .presentation {
+    display: inline-block;
+    max-width: 999px;
+    width: 100%;
+    margin-top: 70px;
+    background-color: #61b2b7;
+    position: relative;
+    min-height: 300px;
+    vertical-align: middle;
+  }
+  /* line 58, ../scss/banner.scss */
+  .presentation .logo {
+    z-index: 5;
+    padding-top: 50px;
+  }
+  /* line 64, ../scss/banner.scss */
+  .presentation img {
+    border-radius: 50%;
+  }
+}
