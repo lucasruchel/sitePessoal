@@ -1,0 +1,32 @@
+@import url(http://fonts.googleapis.com/css?family=Special+Elite);
+
+.somethig-extra{
+    display: block;
+    min-height: 50px;
+    width: 100%;
+    background-color: #fda237;
+    padding: 20px 10px 20px;
+    text-align: center;
+    
+    
+}
+.trigger{
+        display: inline-block;
+        background-color: #fcfd47;
+        width: 200px;
+        height: 40px;
+        border-radius: 3px;
+        
+        text-align: center;
+        padding: 10px 5px 10px;
+        font-family: "Special Elite",cursive;
+        color: #000;
+        
+        &:hover{
+            background-color: #2afe62;
+            cursor: pointer;
+        }
+    }
+.contend{
+        display: none;
+    }
