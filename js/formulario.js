@@ -33,9 +33,7 @@ $("#comment").submit(function(e){
     if (!error_free){
         e.preventDefault();
     }
-    else{
-        alert('No errors: Form will be submitted');
-    }
+    
 });
 
 
