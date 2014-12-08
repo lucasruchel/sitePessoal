@@ -14,7 +14,7 @@ $(document).ready(function (){
             var _photos = this.photos;
             
             $.each(_photos, function(){
-              $('.somethig-extra .contend').append("<a class='fancybox' data-fancybox-group='gallery'> <img src='" +this.original_size.url+ "'/> </a>");
+              $('.somethig-extra .contend').append("<a class='fancybox' href='"+this.original_size.url+"' data-fancybox-group='gallery'> <img src=''/> </a>");
             });
           });
         });
